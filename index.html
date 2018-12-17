@@ -1,4 +1,5 @@
 <script>
+function conv(){
 var inpt = document.getElementById('inpt').value;
 var cnv=" ";
 var cnvf=" "
@@ -39,6 +40,7 @@ if(cnv.charAt(i)==9)
 cnvf+="1001";
 }
 document.getElementById('out').innerHTML=cnvf;
+}
 </script>
-<input id="inpt">
-<div style="width:700px;" id="out"></div>
+<input id="inpt"><input type="submit" value="Convert" onclick="conv()">
+<p style="max-width:300px; overflow:scroll;" id="out"></p>
