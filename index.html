@@ -1,0 +1,44 @@
+<script>
+var inpt = document.getElementById('inpt').value;
+var cnv=" ";
+var cnvf=" "
+var chars=" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYSZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+//+33
+var ths=[];
+ths.length=inpt.length;
+for(var i = 0;i<inpt.length;i++){
+ths[i]=inpt.charAt(i);
+}
+for(var i = 0;i<ths.length;i++){
+ths[i]=chars.indexOf(ths[i])+33;
+}
+console.log(ths);
+for(var i = 0;i<ths.length;i++){
+cnv+=ths[i];
+}
+for(var i = 0;i<cnv.length;i++){
+if(cnv.charAt(i)==0)
+cnvf+="0000";
+if(cnv.charAt(i)==1)
+cnvf+="0001";
+if(cnv.charAt(i)==2)
+cnvf+="0010";
+if(cnv.charAt(i)==3)
+cnvf+="0011";
+if(cnv.charAt(i)==4)
+cnvf+="0100";
+if(cnv.charAt(i)==5)
+cnvf+="0101";
+if(cnv.charAt(i)==6)
+cnvf+="0110";
+if(cnv.charAt(i)==7)
+cnvf+="0111";
+if(cnv.charAt(i)==8)
+cnvf+="1000";
+if(cnv.charAt(i)==9)
+cnvf+="1001";
+}
+console.log(cnvf);
+</script>
+<input id="inpt">
+<p id="out"></p>
