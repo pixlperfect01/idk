@@ -88,4 +88,7 @@ ttf[i/2]=tf[i]+tf[i+1];
 for(var i = 0;i<ttf.length;i++){
 ttf[i]=parseInt(ttf[i]);
 }
-for(var i = 0;i<ttf.length;i++){
+for(var i=0;i<ttf.length;i++){
+ttf[i]=chars.charAt(ttf[i]-32);
+}
+console.log(ttf)
