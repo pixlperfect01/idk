@@ -41,20 +41,12 @@ cnvf+="1001";
 }
 document.getElementById('out').innerHTML=cnvf;
 }
-</script>
-to binary
-<textarea id="inpt"></textarea><input type="submit" value="Convert" onclick="conv()">
-<p style="max-width:300px;" id="out"></p>
-<br>
-<br>
-from binary
-<textarea id="inpt1"></textarea><input type="submit" value="Convert">
-<p style="max-width:300px;" id="out1"></p>
-
-var inpt=document.getElementById('inpt1').value;
+  function conv2(){
+    var inpt=document.getElementById('inpt1').value;
 var chars=" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYSZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
 var tf=[];
 var ttf=[];
+var final="";
 tf.length=inpt.length/4;
 ttf.length=tf.length/2;
 for(var i = 0;i<inpt.length;i+=4){
@@ -91,4 +83,17 @@ ttf[i]=parseInt(ttf[i]);
 for(var i=0;i<ttf.length;i++){
 ttf[i]=chars.charAt(ttf[i]-32);
 }
-console.log(ttf)
+for(var i=0;i<ttf.length;i++){
+final+=ttf[i];
+}
+document.getElementById('out1').innerHTML=final;
+  }
+</script>
+to binary
+<textarea id="inpt"></textarea><input type="submit" value="Convert" onclick="conv()">
+<p style="max-width:300px;" id="out"></p>
+<br>
+<br>
+from binary
+<textarea id="inpt1"></textarea><input type="submit" value="Convert" onclick="conv2()">
+<p style="max-width:300px;" id="out1"></p>
