@@ -47,8 +47,8 @@ var chars=" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYSZ[\\]^_`
 var tf=[];
 var ttf=[];
 var final="";
-tf.length=inpt.length/4;
-ttf.length=tf.length/2;
+tf.length=inpt.length*4;
+ttf.length=tf.length*2;
 for(var i = 0;i<inpt.length;i+=4){
 tf[i/4]=inpt.charAt(i)+inpt.charAt(i+1)+inpt.charAt(i+2)+inpt.charAt(i+3);
 }
