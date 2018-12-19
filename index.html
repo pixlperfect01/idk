@@ -96,4 +96,36 @@ to binary
 <br>
 from binary
 <textarea id="inpt1"></textarea><input type="submit" value="Convert" onclick="conv2()">
-<p style="max-width:300px;" id="out1"></p>
+<p style="max-width:300px;" id="out1"></p><!--
+if(tf[i]=="0000")
+tf[i]="0";
+if(tf[i]=="0001")
+tf[i]="1";
+if(tf[i]=="0010")
+tf[i]="2";
+if(tf[i]=="0011")
+tf[i]="3";
+if(tf[i]=="0100")
+tf[i]="4";
+if(tf[i]=="0101")
+tf[i]="5";
+if(tf[i]=="0110")
+tf[i]="6";
+if(tf[i]=="0111")
+tf[i]="7";
+if(tf[i]=="1000")
+tf[i]="8";
+if(tf[i]=="1001")
+tf[i]="9";-->
+<!--
+var inpt=document.getElementById('inpt1').value;
+var chars=" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYSZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~";
+var tf=[];
+var ttf=[];
+var final="";
+tf.length=inpt.length/4;
+for(var i=0;i<inpt.length;i+=4){
+tf[i/4]=inpt.charAt(i+0)+inpt.charAt(i+1)+inpt.charAt(i+2)+inpt.charAt(i+3);
+}
+console.log(tf)
+-->
